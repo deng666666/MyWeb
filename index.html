@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Me Is Me</title>
+    <link rel="icon" href="./images/dog2.png" sizes="16*16">
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-image: -webkit-cross-fade(url("./images/bg (1).jpg"), url("./images/bg (3).jpg"), 50%);
+        /* background: #fff url("./images/bg (1).jpg") no-repeat left top; */
+        background-size: 100%;
+    }
+    .main{
+        position: absolute;
+        height: 250px;
+        width: 420px;
+        top: 40%;
+        left: 50%;
+        margin: -125px 0 0 -210px;
+        padding: 5px;
+        border: 1px solid #fff;
+        border-radius: 10%;
+    }
+    .content{
+        height: 100%;
+        width: 100%;
+        border: 1px solid #fff;
+        border-radius: 10%;
+    }
+    a:hover{
+        box-shadow: 0 0 5px #FFF;
+        transform: scale(0.97);
+        background-image: -webkit-cross-fade(url("./images/bg (3).jpg"), url("./images/bg (2).jpg"), 50%);
+        /* background: #fff url("./images/dog.gif") no-repeat left top; */
+        background-size: 100%;
+        color: #4F4F4F;
+    }
+    .info{
+        position: absolute;
+        display: inline-block;
+        text-decoration: none;
+        height: 220px;
+        width: 390px;
+        top: 50%;
+        left: 50%;
+        margin: -110px 0 0 -195px;
+        background-color: rgba(255, 250, 250, 0.1);
+        text-align: center;
+        border-radius: 10%;
+        color: #FFF;
+    }
+    .title{
+        margin-top: 80px;
+        font-size: 35px;
+    }
+    .title-info{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .dog{
+        /* position: relative; */
+        height: 10%;
+        width: 100%;
+        background-color: rgb(200, 194, 170);
+        /* border: 1px solid #000; */
+    }
+    .move1{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/walk.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move2{
+        position: absolute;
+        left: 10%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/walk.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move3{
+        position: absolute;
+        left: 20%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/amble.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move4{
+        position: absolute;
+        left: 30%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/amble.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move5{
+        position: absolute;
+        left: 40%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/pace.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move6{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/pace.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move7{
+        position: absolute;
+        left: 60%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/trot.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move8{
+        position: absolute;
+        left: 70%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/trot.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move9{
+        position: absolute;
+        left: 80%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/canter.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+    .move10{
+        position: absolute;
+        left: 90%;
+        top: 0;
+        width: 10%;
+        height: 10%;
+        background-image: url("./images/canter.gif");
+        background-size: 100%;
+        opacity: 0.1;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="content">
+            <a class="info" href="#">
+                <p class="title">Hello</p>
+                <p class="title-info">My name is D.N</p>
+            </a>
+        </div>
+    </div>
+    <div class="move1"></div>
+    <div class="move2"></div>
+    <div class="move3"></div>
+    <div class="move4"></div>
+    <div class="move5"></div>
+    <div class="move6"></div>
+    <div class="move7"></div>
+    <div class="move8"></div>
+    <div class="move9"></div>
+    <div class="move10"></div>
+    <!-- <div class="dog">
+        <div class="stop"></div>
+    </div> -->
+</body>
+</html>
