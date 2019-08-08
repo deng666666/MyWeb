@@ -28,6 +28,34 @@
         text-shadow: 0 0 red;
     }
 
+    /* 顶部滑动部分 */
+    .box {
+        font-size: 14px;
+        font-weight: 500;
+        height: 60px;
+        min-width: 750px;
+        line-height: 30px;
+        position: relative;
+        z-index: 9999;
+        box-shadow: 0 1px 5px #fff;
+    }
+    .slide{
+        box-sizing: border-box;
+        padding-top: 15px;
+        width: 85%;
+    }
+    .slide::before{
+        position: absolute;
+        right: 13%;
+        bottom: 15px;
+        content: '';
+        background-image: url('./image/laugh.png');
+        background-size: 26px 26px;
+        height: 26px;
+        width: 26px;
+    }
+
+
     /* 内容容器 */
     .main{
         position: relative;
@@ -270,6 +298,26 @@
             <span style="font-size: 60px">Hello</span>
             <span style="font-size: 20px;margin-left: 20px;">This is my blog</span>
         </div>
+    </div>
+    <div class="box">
+        <!-- <div class="laugh"></div> -->
+        <marquee direction="left" scrollamount="5" class="slide">
+            <span style="color:rgb(248, 248, 242);">
+                [1] 问：程序猿最讨厌康熙的哪个儿子。答：胤禩。因为他是八阿哥（bug）
+            </span>
+            <span style="margin-left: 10%;color:rgb(255, 95, 133);">
+                [2] 生活中程序猿的真实写照、一款游戏一包烟，一台电脑一下午。一盒泡面一壶水，一顿能管一整天。
+            </span>
+            <span style="margin-left: 10%;color:rgb(248, 189, 0);">
+                [3] 杀一个程序员不需要用枪，改三次需求就可以了。
+            </span>
+            <span style="margin-left: 10%;color: rgb(80, 250, 123);">
+                [4] 知道JAVA程序员和C程序员的差别吗？食堂里，吃完饭就走的是JAVA程序员，吃完饭还要自己 收拾的那就是是C程序员。至于为什么会这样、大家都明白（因为JAVA自带垃圾回收机制、、、C需要手动释放内存）←这就是原因。
+            </span>
+            <span style="margin-left: 10%;color: red;">
+                [5] 用一句话总结了HTML,CSS,JS的关系。HTML是名词，JS是动词，CSS是形容词和副词。
+            </span>
+        </marquee>
     </div>
     <div class="main">
         <div class="main-left">
