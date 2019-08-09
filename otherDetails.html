@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Is Me</title>
+    <link rel="icon" href="./image/DN.png" sizes="16*16">
+    <link rel="stylesheet" href="./css/detailsMain.css">
+</head>
+<body>
+    <div class="content">
+        <ul>
+            <h1 style="border-bottom: 1px solid #ccc;">Others</h1>
+            <li>
+                <p>JS路由跳转，获取本行的数据，把值传递给跳转的页面</p>
+                <pre><code>      &lttemplate slot-scope="scope"&gt,使用@click="goAdd(scope.row)"调用方法。
+            //要跳转的页面的js函数
+            goAdd(row){
+                this.$router.push({
+                path:'./addCountry', 
+                // name: 'addCountries',
+                query: {list: row}})
+            } 
+            //跳转到的页面的js函数
+            getQuery(){
+                // 取到路由带过来的参数
+                if(this.$route.query.list){
+                    this.counterForm=this.$route.query.list
+                }
+            },
+                </code></pre>
+            </li>
+            <li>
+                <p>根据每行的状态名称不同，加上不同的样式(class)</p>
+                <pre><code>
+        &lttemplate slot-scope="scope"&gt    在标签内定义 :class="scope.row.orderStatus|state"  
+        //使用vue中的filters来判断每行的数据(scope.row.orderStatus)的值，然后返回对应类名。                           
+            filters:{
+                state(item) {
+                    switch(item){
+                        case '未处理':
+                            return 'Untreated'; //这个是在style中定义好的样式。
+                            break;
+                        case '处理中':
+                            return 'Processing';
+                            break;
+                        case '已完成':
+                            return 'Success';
+                            break;
+                        case '已取消':
+                            return 'cancel';
+                            break;
+                    }
+                },
+            },
+                </code></pre>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
