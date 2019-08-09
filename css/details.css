@@ -106,6 +106,9 @@
         background-color: #d33632;
         color: #fff;
     }
+    .card-Label:visited{
+        color: #fff;
+    }
     .card-Label::after{
         content: '';
         width:0px;
