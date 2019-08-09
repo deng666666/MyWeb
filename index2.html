@@ -14,7 +14,18 @@
     }
     body{
         background: #DCDCDC;
+        min-width: 1080px;
+        font-size: 14px;
     }
+    a{
+        text-decoration: none;
+        color: rgb(0, 166, 124);
+    }
+    a:focus, a:hover {
+        color: #007046;
+        text-decoration: none;
+    }
+
     /* 标题部分 */
     .title{
         height: 120px;
@@ -24,35 +35,40 @@
         text-align: center;
     }
     .title-info{
-        padding-top: 30px;
-        text-shadow: 0 0 red;
+        padding-top: 20px;
+        text-shadow: 3px 3px black;
     }
 
     /* 顶部滑动部分 */
-    .box {
-        font-size: 14px;
-        font-weight: 500;
-        height: 60px;
-        min-width: 750px;
-        line-height: 30px;
-        position: relative;
-        z-index: 9999;
-        box-shadow: 0 1px 5px #fff;
-    }
     .slide{
-        box-sizing: border-box;
-        padding-top: 15px;
-        width: 85%;
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 50px;
+        width: 100%;
+        background: #777;
+        box-shadow: 0 0 5px #fff;
+        z-index: 9999;
     }
     .slide::before{
         position: absolute;
-        right: 13%;
-        bottom: 15px;
+        right: 0;
+        bottom: 0;
         content: '';
         background-image: url('./image/laugh.png');
-        background-size: 26px 26px;
-        height: 26px;
-        width: 26px;
+        background-size: 50px 50px;
+        height: 50px;
+        width: 50px;
+    }
+    .slide::after{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        background-image: url('./image/laugh.png');
+        background-size: 50px 50px;
+        height: 50px;
+        width: 50px;
     }
 
 
@@ -82,13 +98,18 @@
     .card-Label{
         background-color: #d9534f;
         color: #fff;
-        padding: 0 6px 4px;
+        padding: 2px 6px 4px;
         position: relative;
     }
     .card-title{
         margin-left: 20px;
         font-size: 20px;
         font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;  
+        -webkit-box-orient: vertical;
     }
     .card-Label:hover{
         background-color: #d33632;
@@ -109,8 +130,8 @@
     .card-bg{
         display: inline-block;
         margin: 0 20px 0 0;
-        height: 123px;
-        width: 200px;
+        width: 30%;
+        border-radius: 5px;
         overflow: hidden;
     }
     .card-bg img{
@@ -125,7 +146,7 @@
         color: #777;
         font-size: 14px;
         line-height: 24px;
-        height: 70;
+        height: 72px;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -137,6 +158,12 @@
         right: 20px;
         bottom: 20px;
         font-size: 13px;
+        padding-left: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;  
+        -webkit-box-orient: vertical;
     }
     .head{
         position: relative;
@@ -233,18 +260,30 @@
     /* 热门标题 */
     .tips-title{
         font-size: 18px;
+        line-height: 30px;
         color: rgb(26, 188, 182);
         width: 100%;
-        height: 40px;
+        height: 35px;
         border-bottom: 1px solid rgb(144, 187, 168);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;  
+        -webkit-box-orient: vertical;
     }
     /* 每行内容 */
     .line{
         box-sizing: border-box;
         width: 100%;
-        height: 40px;
+        height: 30px;
+        line-height: 20px;
         font-size: 14px;
         padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;  
+        -webkit-box-orient: vertical;
     }
     /* 排序图标 */
     .line-icon1{
@@ -282,49 +321,53 @@
     .line-info{
         margin-left: 20px;
     }
-    a{
-        text-decoration: none;
-        color: rgb(0, 166, 124);
-    }
-    a:focus, a:hover {
-        color: #007046;
-        text-decoration: none;
-    }
 
 </style>
 <body>
     <div class="title">
         <div class="title-info">
-            <span style="font-size: 60px">Hello</span>
+            <span style="font-size: 70px;text-shadow: 4px 4px black;">Hello</span>
             <span style="font-size: 20px;margin-left: 20px;">This is my blog</span>
         </div>
     </div>
-    <div class="box">
-        <!-- <div class="laugh"></div> -->
-        <marquee direction="left" scrollamount="5" class="slide">
-            <span style="color:rgb(248, 248, 242);">
-                [1] 问：程序猿最讨厌康熙的哪个儿子。答：胤禩。因为他是八阿哥（bug）
-            </span>
-            <span style="margin-left: 10%;color:rgb(255, 95, 133);">
-                [2] 生活中程序猿的真实写照、一款游戏一包烟，一台电脑一下午。一盒泡面一壶水，一顿能管一整天。
-            </span>
-            <span style="margin-left: 10%;color:rgb(248, 189, 0);">
-                [3] 杀一个程序员不需要用枪，改三次需求就可以了。
-            </span>
-            <span style="margin-left: 10%;color: rgb(80, 250, 123);">
-                [4] 知道JAVA程序员和C程序员的差别吗？食堂里，吃完饭就走的是JAVA程序员，吃完饭还要自己 收拾的那就是是C程序员。至于为什么会这样、大家都明白（因为JAVA自带垃圾回收机制、、、C需要手动释放内存）←这就是原因。
-            </span>
-            <span style="margin-left: 10%;color: red;">
-                [5] 用一句话总结了HTML,CSS,JS的关系。HTML是名词，JS是动词，CSS是形容词和副词。
-            </span>
-        </marquee>
-    </div>
+    <marquee direction="left" scrollamount="5" class="slide">
+        <span style="color:rgb(248, 248, 242);">
+            [1]：问：程序猿最讨厌康熙的哪个儿子。答：胤禩。因为他是八阿哥（bug）
+        </span>
+        <span style="margin-left: 10%;color:rgb(255, 95, 133);">
+            [2]：生活中程序猿的真实写照、一款游戏一包烟，一台电脑一下午。一盒泡面一壶水，一顿能管一整天。
+        </span>
+        <span style="margin-left: 10%;color:rgb(248, 189, 0);">
+            [3]：杀一个程序员不需要用枪，改三次需求就可以了。
+        </span>
+        <span style="margin-left: 10%;color: rgb(80, 250, 123);">
+            [4]：知道JAVA程序员和C程序员的差别吗？食堂里，吃完饭就走的是JAVA程序员，吃完饭还要自己 收拾的那就是是C程序员。至于为什么会这样、大家都明白（因为JAVA自带垃圾回收机制、、、C需要手动释放内存）←这就是原因。
+        </span>
+        <span style="margin-left: 10%;color: red;">
+            [5]：用一句话总结了HTML,CSS,JS的关系。HTML是名词，JS是动词，CSS是形容词和副词。
+        </span>
+        <span style="margin-left: 10%;color:rgb(248, 248, 242);">
+            [6]：程序员最痛苦的莫过于两件事，第一件就是要给别人写文档......第二件就是别人遗留的产品为什么没有文档~！！！！
+        </span>
+        <span style="margin-left: 10%;color:rgb(255, 95, 133);">
+            [7]：文件的命名，讲道理应该以英文为主，但是英语又不好，所以只好用拼音，最痛苦的应该算是那些英语又不好，又想秀一下的程序员，一半英语一半拼音，如mainFangFa~~~你说看了糟心不糟心。
+        </span>
+        <span style="margin-left: 10%;color:rgb(248, 189, 0);">
+            [8]：程序员，年二十有三，头秃，始从文，连考而不中。遂习武，练武场上发一矢，中鼓吏，逐之出。改学IT，自撰一函数，用之，堆栈溢出。
+        </span>
+        <span style="margin-left: 10%;color: rgb(80, 250, 123);">
+            [9]：项目经理说：给你三个人，多久可以完成？程序员：3个月！那五个人呢？1个半月那100个呢？1年吧！那1000个呢？程序员：无法完成！
+        </span>
+        <span style="margin-left: 10%;color: red;">
+            [10]：关于改bug：“我爱你”三个字，讲出来只要三秒钟，解释要三小时，证明却要一辈子。“bug”三个字母，发现需要三秒，找到需要三小时，debug却要一辈子。这真的是多么痛彻的领悟。
+        </span>
+    </marquee>
     <div class="main">
         <div class="main-left">
             <div class="card">
                 <div style="margin: 0 10px 15px 0;display: flex;">
-                    <a href="" class="card-Label">Html</a>
-                    <a href="" class="card-title">如何从一个小白到精通Html</a>
+                    <a href="" class="card-Label">HTML&CSS</a>
+                    <a href="" class="card-title">生命不息,学习不止。</a>
                 </div>
                 <div style="display: flex">
                     <div class="card-bg">
@@ -352,18 +395,16 @@
 
             <div class="card">
                 <div style="margin: 0 10px 15px 0;display: flex;">
-                    <a href="" class="card-Label">Html</a>
-                    <a href="" class="card-title">如何从一个小白到精通Html</a>
+                    <a href="" class="card-Label">JavaScript</a>
+                    <a href="" class="card-title">生命不息,学习不止。</a>
                 </div>
                 <div style="display: flex">
                     <div class="card-bg">
-                        <a href=""><img src="./image/bg1.jpg" alt=""></a>
+                        <a href=""><img src="./image/bg2.jpg" alt=""></a>
                     </div>
                     <span class="card-info">
-                        对Web标准的理解（结构、表现、行为）、浏览器内核、
-                        渲染原理、依赖管理、兼容性、CSS语法、层次关系，常用属性、布局、选择器、
-                        权重、盒模型、Hack、CSS预处理器、CSS3、Flexbox、CSS Modules、Document flow、
-                        BFC、HTML5（离线 & 存储、Histoy,多媒体、WebGL\SVG\Canvas）；
+                        数据类型、运算、对象、Function、继承、闭包、作用域、事件、Prototype、RegExp、JSON、Ajax、DOM、BOM、
+                        内存泄漏、跨域、异步请求、模板引擎、模块化、Flux、同构、算法、ECMAScript6、Nodejs、HTTP、
                     </span>
                 </div>
                 <div class="card-bot">
@@ -381,18 +422,16 @@
 
             <div class="card">
                 <div style="margin: 0 10px 15px 0;display: flex;">
-                    <a href="" class="card-Label">Html</a>
-                    <a href="" class="card-title">如何从一个小白到精通Html</a>
+                    <a href="" class="card-Label">其他</a>
+                    <a href="" class="card-title">生命不息,学习不止。</a>
                 </div>
                 <div style="display: flex">
                     <div class="card-bg">
-                        <a href=""><img src="./image/bg1.jpg" alt=""></a>
+                        <a href=""><img src="./image/bg3.jpg" alt=""></a>
                     </div>
                     <span class="card-info">
-                        对Web标准的理解（结构、表现、行为）、浏览器内核、
-                        渲染原理、依赖管理、兼容性、CSS语法、层次关系，常用属性、布局、选择器、
-                        权重、盒模型、Hack、CSS预处理器、CSS3、Flexbox、CSS Modules、Document flow、
-                        BFC、HTML5（离线 & 存储、Histoy,多媒体、WebGL\SVG\Canvas）；
+                        主流MVVM框架(React\Vue\Angular)、Hybrid App\React Native\Weex、TypeScript、RESTFul、WEB安全、
+                        前端工程化、依赖管理、性能优化、重构、团队协作、可维护、易用性、SEO、UED、前端技术选型、快速学习能力等；
                     </span>
                 </div>
                 <div class="card-bot">
