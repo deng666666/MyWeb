@@ -24,6 +24,7 @@ body{
 }
 .content pre{
     background-color: #f6f8fa;
+    border-left: 8px solid rgb(203, 203, 203);
     border-radius: 3px;
     font-size: 14px;
     line-height: 40px;
