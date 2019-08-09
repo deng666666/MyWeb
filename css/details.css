@@ -4,7 +4,7 @@
     }
     body{
         background: #DCDCDC;
-        min-width: 1260px;
+        min-width: 1250px;
         font-size: 14px;
     }
     a{
@@ -37,7 +37,7 @@
         line-height: 50px;
         width: 100%;
         background: #777;
-        box-shadow: 0 0 5px #fff;
+        box-shadow: 5px 0 20px #fff;
         z-index: 9999;
     }
     .slide::before{
@@ -66,7 +66,7 @@
     /* 内容容器 */
     .main{
         position: relative;
-        width: 70%;
+        width: 80%;
         margin: auto;
         background: #FFFAF0;
         display: flex;
