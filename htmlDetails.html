@@ -8,18 +8,6 @@
     <link rel="icon" href="./image/DN.png" sizes="16*16">
     <link rel="stylesheet" href="./css/detailsMain.css">
 </head>
-<style>
-    .go{
-        background-image: url('./image/next.png');
-        background-size: 100% 100%;
-        position: fixed;
-        right: 5%;
-        top: 50%;
-        display: inline-block;
-        width: 6%;
-        height: 10%;
-    }
-</style>
 <body>
    <div class="content">
         <ul>
@@ -30,14 +18,12 @@
     （2）标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。
             </code></pre>
             </li>
-
             <li>
                 <p>HTML5 为什么只需要写 <code>&lt;!DOCTYPE HTML&gt;</code>？</p>
                 <pre>    <code>HTML5 不基于 SGML，因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；               
     而HTML4.01基于SGML,所以需要对DTD进行引用，才能告知浏览器文档所使用的文档类型。
             </code></pre>
             </li>
-
             <li>
                 <p>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</p>
                 <pre><code>   首先：CSS规范规定，每个元素都有display属性，确定该元素的类型，每个元素都有默认的display值，如div的display默认值为“block”，则为“块级”元素；span默认display属性值为“inline”，是“行内”元素。         
@@ -45,11 +31,10 @@
         （2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p        
         （3）常见的空元素：
             &lt;br&gt; &lt;hr&gt; &lt;img&gt; &lt;input&gt; &lt;link&gt; &lt;meta&gt;
-        鲜为人知的是：
-            &lt;area&gt; &lt;base&gt; &lt;col&gt; &lt;command&gt; &lt;embed&gt; &lt;keygen&gt; &lt;param&gt; &lt;source&gt; &lt;track&gt; &lt;wbr&gt;
+    鲜为人知的是：
+        &lt;area&gt; &lt;base&gt; &lt;col&gt; &lt;command&gt; &lt;embed&gt; &lt;keygen&gt; &lt;param&gt; &lt;source&gt; &lt;track&gt; &lt;wbr&gt;
     </code></pre>
             </li>
-
             <li>
                 <p>页面导入样式时，使用link和@import有什么区别？</p>
                 <pre><code>    （1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;           
@@ -58,7 +43,6 @@
     （4）link支持使用js控制DOM去改变样式，而@import不支持;
                 </code></pre>
             </li>
-
             <li>
                 <p>介绍一下你对浏览器内核的理解？</p>
                 <pre><code>    主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。
@@ -67,17 +51,14 @@
     最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。
                 </code></pre>
             </li>
-
             <li>
                 <p>常见的浏览器内核有哪些？</p>
                 <pre><code>    Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]
     Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等
     Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]
-    Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]
-    <a href="http://www.cnblogs.com/fullhouse/archive/2011/12/19/2293455.html">浏览器内核的解析和对比</a>          
+    Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]         
                 </code></pre>
             </li>
-
             <li>
                 <p>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</p>
                 <pre><code>    * HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
@@ -87,8 +68,7 @@
             sessionStorage 的数据在浏览器关闭后自动删除;
             语意化更好的内容元素，比如 article、footer、header、nav、section;
             表单控件，calendar、date、time、email、url、search;
-            新的技术webworker, websocket, Geolocation;
-    
+            新的技术webworker, websocket, Geolocation;    
     移除的元素：
             纯表现的元素：basefont，big，center，font, s，strike，tt，u;
             对可用性产生负面影响的元素：frame，frameset，noframes；
@@ -96,27 +76,19 @@
     * 支持HTML5新标签：
             IE8/IE7/IE6支持通过document.createElement方法产生的标签，
                 可以利用这一特性让这些浏览器支持HTML5新标签，
-                浏览器支持新标签后，还需要添加标签默认的样式。
-    
+                浏览器支持新标签后，还需要添加标签默认的样式。 
             当然也可以直接使用成熟的框架、比如html5shim;
-            &lt;!--[if lt IE 9]&gt;
-                &lt;script&gt; src="http://html5shim.googlecode.com/svn/trunk/html5.js"&lt;/script&gt;
-            &lt;![endif]--&gt;
-    
     * 如何区分HTML5： DOCTYPE声明\新增的结构元素\功能元素
                 </code></pre>
             </li>
-
             <li>
                 <p>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</p>
                 <pre><code>    cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
-        cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
-        sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。
-    
+    cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。
+    sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。   
         存储大小：
             cookie数据大小不能超过4k。
             sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
-    
         有期时间：
             localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
             sessionStorage  数据在当前浏览器窗口关闭后自动删除。
@@ -127,88 +99,63 @@
             <li>
                 <p>iframe有那些缺点？</p>
                 <pre><code>    *iframe会阻塞主页面的Onload事件；
-        *搜索引擎的检索程序无法解读这种页面，不利于SEO;
-    
-        *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
-    
+    *搜索引擎的检索程序无法解读这种页面，不利于SEO;    
+    *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。   
         使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
         动态给iframe添加src属性值，这样可以绕开以上两个问题。
                 </code></pre>
             </li>
-
             <li>
                 <p>Label的作用是什么？是怎么用的？</p>
-                <pre><code>    label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
-                
+                <pre><code>    label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。                
         &lt;label for="Name"&gt;Number:&lt;/label&gt;
-        &lt;input type=“text“name="Name" id="Name"/&gt;
-    
+        &lt;input type=“text“name="Name" id="Name"/&gt;  
         &lt;label&gt;Date:&lt;input type="text" name="B"/&gt;&lt;/label&gt;
                 </code></pre>
             </li>
-
             <li>
                 <p>HTML5的form如何关闭自动完成功能？</p>
                 <pre><code>    给不想要提示的 form 或某个 input 设置为 autocomplete=off。
                 </code></pre>
             </li>
-
             <li>
                 <p>如何实现浏览器内多个标签页之间的通信? (阿里)</p>
                 <pre><code>    WebSocket、SharedWorker；
-        也可以调用localstorge、cookies等本地存储方式；
-    
-        localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，
-        我们通过监听事件，控制它的值来进行页面信息通信；
-        注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；
+    也可以调用localstorge、cookies等本地存储方式；    
+    localstorge另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，
+    我们通过监听事件，控制它的值来进行页面信息通信；
+    注意quirks：Safari 在无痕模式下设置localstorge值时会抛出 QuotaExceededError 的异常；
                 </code></pre>
             </li>
-
-            <li>
-                <p>webSocket如何兼容低浏览器？(阿里)</p>
-                <pre><code>    Adobe Flash Socket 、
-        ActiveX HTMLFile (IE) 、
-        基于 multipart 编码发送 XHR 、
-        基于长轮询的 XHR
-                </code></pre>
-            </li>
-
             <li>
                 <p>页面可见性（Page Visibility API） 可以有哪些用途？</p>
                 <pre><code>    通过 visibilityState 的值检测页面当前是否可见，以及打开网页的时间等;
-        在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
+    在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放；
                 </code></pre>
             </li>
-
             <li>
                 <p>如何在页面上实现一个圆形的可点击区域？</p>
                 <pre><code>    1、map+area或者svg
-        2、border-radius
-        3、纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等
+    2、border-radius
+    3、纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等
                 </code></pre>
             </li>
-
             <li>
                 <p>实现不使用 border 画出1px高的线，在不同浏览器的标准模式与怪异模式下都能保持一致的效果。</p>
                 <pre><code>    &lt;div style="height:1px;overflow:hidden;background:red"&gt;&lt;/div&gt;
                 </code></pre>
             </li>
-
             <li>
                 <p>网页验证码是干嘛的，是为了解决什么安全问题。</p>
                 <pre><code>    区分用户是计算机还是人的公共全自动程序。可以防止恶意破解密码、刷票、论坛灌水；
         有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。
                 </code></pre>
             </li>
-
             <li>
                 <p>title与h1的区别、b与strong的区别、i与em的区别？</p>
-                <pre><code>    title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；
-                
-        strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：&lt;strong&gt;会重读，而&lt;B&gt;是展示强调内容。
-    
-        i内容展示为斜体，em表示强调的文本；
-    
+                <pre><code>    title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；             
+        strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：&lt;strong&gt;会重读，而&lt;B&gt;是展示强调内容。   
+        i内容展示为斜体，em表示强调的文本；   
         Physical Style Elements -- 自然样式标签
         b, i, u, s, pre
         Semantic Style Elements -- 语义样式标签
@@ -218,6 +165,5 @@
             </li>
         </ul>
    </div>
-   <a href="./csslDetails.html" class="go"></a>
 </body>
 </html>
