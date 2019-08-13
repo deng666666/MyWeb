@@ -102,6 +102,9 @@
         -webkit-line-clamp: 1;  
         -webkit-box-orient: vertical;
     }
+    .card-title:hover{
+        margin-left: 30px;
+    }
     .card-Label:hover{
         background-color: #d33632;
         color: #fff;
