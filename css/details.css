@@ -23,43 +23,50 @@
         background: rgb(213, 100, 100);
         color: #fff;
         text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
     .title-info{
         padding-top: 20px;
-        text-shadow: 3px 3px black;
+        text-shadow: 3px 3px rgba(0,0,0,0.5);
     }
 
     /* 顶部滑动部分 */
-    .slide{
-        position: relative;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 50px;
-        width: 100%;
-        background: #777;
-        box-shadow: 5px 0 20px #fff;
+    .slide{          
+        position: fixed;
+        top: 120px;
+        left: 0;
+        height: 60px;
+        background: rgba(0, 0, 0,0.5);
         z-index: 9999;
+        box-shadow: 0 0 10px rgba(255, 255, 255,0.6);
     }
-    .slide::before{
+    .slide-info{
+        font-size: 16px;
+        line-height: 60px;
+        font-weight: 500;
+    }
+    .slide-info::before{
         position: absolute;
         right: 0;
         bottom: 0;
         content: '';
         background-image: url('../image/laugh.png');
-        background-size: 50px 50px;
-        height: 50px;
-        width: 50px;
+        background-size: 60px 60px;
+        height: 60px;
+        width: 60px;
         z-index: 999;
     }
-    .slide::after{
+    .slide-info::after{
         position: absolute;
         left: 0;
         bottom: 0;
         content: '';
         background-image: url('../image/laugh.png');
-        background-size: 50px 50px;
-        height: 50px;
-        width: 50px;
+        background-size: 60px 60px;
+        height: 60px;
+        width: 60px;
         z-index: 999;
     }
 
@@ -67,13 +74,14 @@
     .main{
         position: relative;
         width: 80%;
-        margin: auto;
-        background: #FFFAF0;
+        margin: 180px auto 50px auto;
         display: flex;
     }
     /* 左侧布栏 */
     .main-left{
         width: 70%;
+        box-shadow: 0 0 10px rgb(24, 25, 32) inset;
+        border-radius: 5px;
     }
     /* 卡片 */
     .card{
@@ -82,13 +90,13 @@
         margin: 20px;
         padding: 20px;
         height: 235px;
-        background: #fff;
+        background: rgba(255, 255, 255,0.6);
         border-radius: 20px;
-        box-shadow: 0 0 5px #ccc inset;
+        box-shadow: 0 0 5px rgb(144, 144, 144) inset;
     }
     .card-Label{
         background-color: #d9534f;
-        color: #fff;
+        color: rgba(255, 255, 255,1);
         padding: 2px 6px 4px;
         position: relative;
     }
@@ -246,13 +254,16 @@
     .main-right{
         width: 25%;
         padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgb(24, 25, 32) inset; 
     }
     /* 热门模块 */
     .tips{
         box-sizing: border-box;
         width: 100%;
-        background: #fff;
+        background: rgb(255, 255, 255, 0.6);
         padding: 20px;
+        box-shadow: 0 0 10px rgb(144, 144, 144) inset; 
     }
     /* 热门标题 */
     .tips-title{
@@ -281,6 +292,9 @@
         display: -webkit-box;
         -webkit-line-clamp: 1;  
         -webkit-box-orient: vertical;
+    }
+    .line:hover {
+        font-size: 15px;
     }
     /* 排序图标 */
     .line-icon1{
